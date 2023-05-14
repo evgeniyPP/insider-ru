@@ -2,7 +2,7 @@ import { useState, useEffect, type FC } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { decode } from 'js-base64';
 
-const TOTAL_TIME = 60;
+const TOTAL_TIME = +(import.meta.env.VITE_TOTAL_TIME ?? 60);
 
 const Game: FC = () => {
   const { base64 } = useParams();
